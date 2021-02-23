@@ -1,0 +1,17 @@
+/* UTILITIES */
+
+.u-none {
+    display: none !important;
+}
+
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+
+@media print {
+    .u-none\@print {
+        display: none;
+    }
+}
+
+/* END UTILITIES */

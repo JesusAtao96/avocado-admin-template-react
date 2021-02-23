@@ -1,0 +1,22 @@
+/* TOOLS - MIXINS */
+
+// MEDIA QUERYS
+@mixin sm() {
+  @media (max-width: $bp-small) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media (max-width: $bp-medium) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (max-width: $bp-large) {
+    @content;
+  }
+}
+
+/* END TOOLS - MIXINS */

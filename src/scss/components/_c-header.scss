@@ -1,0 +1,40 @@
+.c-header {
+  display: flex;
+  flex-basis: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: $header-height;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+
+  &__title {
+    color: $black;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    @include md() {
+        font-size: 16px;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $spacing;
+  }
+
+  &__logout {
+    color: $danger;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

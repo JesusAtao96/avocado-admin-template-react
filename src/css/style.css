@@ -1,0 +1,197 @@
+/* TOOLS - MIXINS */
+/* END TOOLS - MIXINS */
+/* GENERIC */
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box; }
+  *::after:hover, *::after:active, *::after:focus, *::after:visited,
+  *::before:hover,
+  *::before:active,
+  *::before:focus,
+  *::before:visited {
+    outline: 0; }
+
+/* END GENERIC */
+/* TAGS */
+html,
+body {
+  font-family: "Livvic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-transform: none; }
+
+p {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding: 0;
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit; }
+
+a {
+  display: inline-block;
+  width: auto;
+  color: inherit;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  color: #fff; }
+
+/* END TAGS */
+/* OBJECTS */
+.o-text-align-left {
+  text-align: left; }
+
+.o-text-align-right {
+  text-align: right; }
+
+.o-text-align-center {
+  text-align: center; }
+
+.o-text-align-justify {
+  text-align: justify; }
+
+/* END OBJECTS */
+.c-dashboard {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: min-content 1fr; }
+  @media (max-width: 50em) {
+    .c-dashboard {
+      grid-template-columns: 81px 1fr; } }
+  .c-dashboard__main {
+    flex: 1;
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f4f7fa; }
+
+.c-header {
+  display: flex;
+  flex-basis: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative; }
+  .c-header__title {
+    color: #545454;
+    font-size: 20px;
+    text-transform: uppercase; }
+    @media (max-width: 50em) {
+      .c-header__title {
+        font-size: 16px; } }
+  .c-header__icon {
+    width: 20px;
+    margin-right: 5px; }
+  .c-header__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px; }
+  .c-header__logout {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold; }
+
+.c-nav {
+  flex: 0 0 250px;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  background-color: #1fab89;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 250px;
+  transition: all 0.3s;
+  z-index: 10; }
+  .c-nav--toggled {
+    width: 81px; }
+  .c-nav--toggled .c-nav__logo,
+  .c-nav--toggled .c-nav__text {
+    display: none; }
+  @media (max-width: 50em) {
+    .c-nav {
+      grid-template-columns: 81px 1fr; } }
+  .c-nav__header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #62d2a2;
+    padding: 0 32px; }
+  .c-nav__logo {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.3rem; }
+  .c-nav__toggle {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0; }
+  .c-nav__menu {
+    list-style-type: none;
+    padding: 0; }
+  .c-nav__item {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1); }
+  .c-nav__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 32px;
+    color: rgba(238, 238, 238, 0.9);
+    text-decoration: none; }
+    .c-nav__link:hover, .c-nav__link:active, .c-nav__link:focus, .c-nav__link.nuxt-link-active {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1); }
+  .c-nav__icon {
+    width: 20px; }
+
+/* UTILITIES */
+.u-none {
+  display: none !important; }
+
+.u-uppercase {
+  text-transform: uppercase !important; }
+
+@media print {
+  .u-none\@print {
+    display: none; } }
+
+/* END UTILITIES */

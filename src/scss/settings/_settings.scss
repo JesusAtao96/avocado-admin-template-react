@@ -1,0 +1,30 @@
+// Responsive Breakpoints -> 1em = 16px
+$bp-large: 69.375em; // 1110px / 16px = 69.375
+$bp-medium: 50em; // 800px / 16px = 50
+$bp-small: 37.5em; // 600px / 16px = 37.5
+
+// Fonts
+$font-primary: "Livvic", sans-serif;
+
+// Layout
+$header-height: 60px;
+$nav-max-width: 250px;
+$nav-min-width: 81px;
+$nav-item-height: 55px;
+$spacing: 32px;
+
+// Base
+$base: #222831;
+$base2: #1fab89;
+$base3: #62d2a2;
+$base4: #eee;
+
+// Colors
+$black: #545454;
+$white: #fff;
+$primary: #4582ec;
+$secondary: #adb5bd;
+$info: #17a2b8;
+$success: #02b875;
+$warning: #f0ad4e;
+$danger: #d9534f;
